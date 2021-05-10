@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/c5cf8c8e4a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Weather app 🌡️</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="search-form" class="row">
+        <div class="col search-bar">
+          <input
+            id="search"
+            type="text"
+            class="form-control"
+            placeholder="Enter a city..."
+          />
+        </div>
+        <div class="col-auto search-button">
+          <button type="submit" class="btn btn-primary mb-3 button">
+            Search
+          </button>
+        </div>
+        <div class="col-auto current-button">
+          <button type="submit" class="btn btn-primary mb-3" id="geo-button">
+            📍
+          </button>
+        </div>
+      </form>
+      <div class="row">
+        <div class="col-6">
+          <div class="current-location">
+            <h1><span id="current-city"></span><span id="country"></span></h1>
+            <p id="current-day"></p>
+          </div>
+
+          <div class="current-weather">
+            <h2 id="description"></h2>
+            <ul>
+              <li id="humidity"></li>
+              <li id="wind"></li>
+            </ul>
+            <p class="today-temperature">
+              <span id="temp-min"></span> / <span id="temp-max"></span>
+            </p>
+          </div>
+        </div>
+        <div class="col-6 text-center current-temperature">
+          <img src="src/images/sun.png" alt="big sun" width="200px" />
+          <br />
+          <span id="temperature-now"></span>
+          <span id="celsius-link"
+            ><a href="#" class="temperature-link">°C </a></span
+          >
+          <span>|</span>
+          <span id="farenheit-link"
+            ><a href="#" class="temperature-link">°F</a></span
+          >
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="forecast">
+        <div class="row">
+          <div class="col">
+            <p>Monday</p>
+            <img src="src/images/sun.png" alt="sun" />
+            <p>14° / 26°</p>
+          </div>
+          <div class="col">
+            <p>Tuesday</p>
+            <img src="src/images/sun.png" alt="sun" />
+            <p>13° / 27°</p>
+          </div>
+          <div class="col">
+            <p>Wednesday</p>
+            <img src="src/images/cloudysun.png" alt="cloudy sun" />
+            <p>15° / 27°</p>
+          </div>
+          <div class="col">
+            <p>Thursday</p>
+            <img src="src/images/raincloud.png" alt="rain cloud" />
+            <p>16° / 29°</p>
+          </div>
+          <div class="col">
+            <p>Friday</p>
+            <img src="src/images/sun.png" alt="sun" />
+            <p>15° / 28°</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

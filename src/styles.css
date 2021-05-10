@@ -1,0 +1,111 @@
+body {
+  background: #fde9df;
+}
+
+.container {
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+  font-family: "Oxygen", sans-serif;
+  color: #838383;
+  max-width: 570px;
+  margin-top: 50px;
+  box-shadow: 0 0 30px #838383;
+  border: 1px solid #838383;
+  border-radius: 40px;
+  padding: 30px;
+}
+
+.search-bar,
+.search-button,
+.current-button {
+  display: inline-block;
+  margin: 0;
+}
+
+.search-bar {
+  max-width: 300px;
+}
+
+#search {
+  box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+}
+
+.button,
+#geo-button {
+  color: #838383;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: transparent;
+  border: none;
+  border-radius: 10px;
+
+  box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+}
+
+.button:hover,
+#geo-button:hover {
+  color: #838383;
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition: all 200ms ease;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.current-location,
+.current-weather,
+.current-temperature {
+  margin-top: 30px;
+}
+
+#current-city {
+  font-size: 34px;
+}
+
+#country {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-left: 15px;
+}
+
+#current-day {
+  font-size: 22px;
+}
+
+#description {
+  font-size: 25px;
+}
+#description:first-letter {
+  text-transform: uppercase;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.today-temperature {
+  font-size: 20px;
+}
+
+.temperature-link {
+  text-decoration: none;
+  color: #838383;
+}
+
+.temperature-link:hover {
+  color: #838383;
+  font-weight: bold;
+  transition: all 200ms ease;
+}
+
+.current-temperature {
+  font-size: 25px;
+}
+
+.forecast img {
+  width: 50px;
+}
