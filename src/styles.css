@@ -107,4 +107,15 @@ li {
 
 .open-source {
   text-align: center;
+  color: #686d76;
+}
+
+#open-source-link {
+  text-decoration: none;
+  color: #00a8cc;
+}
+
+#open-source-link:hover {
+  text-decoration: underline;
+  transition: all 200ms ease;
 }
