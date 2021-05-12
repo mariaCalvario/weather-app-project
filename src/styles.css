@@ -67,14 +67,7 @@ body {
 }
 
 #current-day {
-  font-size: 22px;
-}
-
-#description {
-  font-size: 25px;
-}
-#description:first-letter {
-  text-transform: uppercase;
+  font-size: 17px;
 }
 
 ul {
@@ -83,12 +76,14 @@ ul {
 
 li {
   list-style: none;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 500;
 }
-
-.today-temperature {
-  font-size: 20px;
+#description {
+  font-size: 22px;
+}
+#description:first-letter {
+  text-transform: uppercase;
 }
 
 .temperature-link {
