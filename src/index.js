@@ -53,7 +53,6 @@ function searchCity(city) {
   let apiKey = "3ca8fabd719ce46d29b590005e8ab76c";
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=${units}&appid=${apiKey}`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(showTemperature);
 }
 
@@ -69,7 +68,6 @@ function searchLocation(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
-  console.log(apiUrl);
   axios.get(apiUrl).then(showTemperature);
 }
 
