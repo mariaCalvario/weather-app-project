@@ -23,11 +23,10 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
-let currentDate = new Date();
-let p = document.querySelector("#current-day");
-p.innerHTML = formatDate(currentDate);
-
 function showTemperature(response) {
+  let p = document.querySelector("#current-day");
+  p.innerHTML = formatDate(new Date(response.data.dt * 1000));
+
   document.querySelector("#current-city").innerHTML = response.data.name;
   document.querySelector("#temperature-now").innerHTML = Math.round(
     response.data.main.temp
