@@ -52,7 +52,7 @@ body {
 
 .current-location,
 .current-weather,
-.current-temperature {
+.temperature-units {
   margin-top: 30px;
 }
 
@@ -66,7 +66,7 @@ body {
   margin-left: 15px;
 }
 
-#current-day {
+#current-date {
   font-size: 17px;
 }
 
@@ -97,7 +97,7 @@ li {
   transition: all 200ms ease;
 }
 
-.current-temperature {
+.temperature-units {
   font-size: 25px;
 }
 

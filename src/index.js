@@ -24,28 +24,25 @@ function formatDate(date) {
 }
 
 function showTemperature(response) {
-  let p = document.querySelector("#current-day");
-  p.innerHTML = formatDate(new Date(response.data.dt * 1000));
+  let currentDate = document.querySelector("#current-date");
+  let currentCity = document.querySelector("#current-city");
+  let country = document.querySelector("#country");
+  let currentTemperature = document.querySelector("#current-temperature");
+  let description = document.querySelector("#description");
+  let humidity = document.querySelector("#humidity");
+  let wind = document.querySelector("#wind");
+  let minTemp = document.querySelector("#temp-min");
+  let maxTemp = document.querySelector("#temp-max");
 
-  document.querySelector("#current-city").innerHTML = response.data.name;
-  document.querySelector("#temperature-now").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#description").innerHTML =
-    response.data.weather[0].description;
-  document.querySelector(
-    "#humidity"
-  ).innerHTML = `Humidity: ${response.data.main.humidity}%`;
-  document.querySelector("#wind").innerHTML = `Wind speed: ${Math.round(
-    response.data.wind.speed
-  )} km/h`;
-  document.querySelector("#temp-min").innerHTML = `${Math.round(
-    response.data.main.temp_min
-  )}°`;
-  document.querySelector("#temp-max").innerHTML = `${Math.round(
-    response.data.main.temp_max
-  )}°`;
-  document.querySelector("#country").innerHTML = response.data.sys.country;
+  currentDate.innerHTML = formatDate(new Date(response.data.dt * 1000));
+  currentCity.innerHTML = response.data.name;
+  country.innerHTML = response.data.sys.country;
+  currentTemperature.innerHTML = Math.round(response.data.main.temp);
+  description.innerHTML = response.data.weather[0].description;
+  humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+  wind.innerHTML = `Wind speed: ${Math.round(response.data.wind.speed)} km/h`;
+  minTemp.innerHTML = `${Math.round(response.data.main.temp_min)}°`;
+  maxTemp.innerHTML = `${Math.round(response.data.main.temp_max)}°`;
 }
 
 function searchCity(city) {
