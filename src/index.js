@@ -34,6 +34,7 @@ function showTemperature(response) {
   let wind = document.querySelector("#wind");
   let minTemp = document.querySelector("#temp-min");
   let maxTemp = document.querySelector("#temp-max");
+  let icon = document.querySelector("#icon");
 
   currentDate.innerHTML = formatDate(new Date(response.data.dt * 1000));
   currentCity.innerHTML = response.data.name;
@@ -44,6 +45,11 @@ function showTemperature(response) {
   wind.innerHTML = `Wind speed: ${Math.round(response.data.wind.speed)} km/h`;
   minTemp.innerHTML = `${Math.round(response.data.main.temp_min)}°`;
   maxTemp.innerHTML = `${Math.round(response.data.main.temp_max)}°`;
+  icon.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  icon.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(city) {
