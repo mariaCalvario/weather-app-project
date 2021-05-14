@@ -47,7 +47,7 @@ function showTemperature(response) {
   maxTemp.innerHTML = `${Math.round(response.data.main.temp_max)}°`;
   icon.setAttribute(
     "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `src/images/gifs/${response.data.weather[0].icon}.gif`
   );
   icon.setAttribute("alt", response.data.weather[0].description);
 }
