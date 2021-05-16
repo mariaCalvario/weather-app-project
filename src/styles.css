@@ -6,6 +6,7 @@ body {
   background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   font-family: "Oxygen", sans-serif;
   color: #838383;
+
   max-width: 570px;
   margin-top: 50px;
   box-shadow: 0 0 30px #838383;

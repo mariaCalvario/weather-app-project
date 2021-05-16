@@ -45,10 +45,7 @@ function showTemperature(response) {
   wind.innerHTML = `Wind speed: ${Math.round(response.data.wind.speed)} km/h`;
   minTemp.innerHTML = `${Math.round(response.data.main.temp_min)}°`;
   maxTemp.innerHTML = `${Math.round(response.data.main.temp_max)}°`;
-  icon.setAttribute(
-    "src",
-    `src/images/gifs/${response.data.weather[0].icon}.gif`
-  );
+  icon.setAttribute("src", `images/svg/${response.data.weather[0].icon}.png`);
   icon.setAttribute("alt", response.data.weather[0].description);
 }
 
