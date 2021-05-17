@@ -10,7 +10,6 @@ body {
   background: transparent;
   font-family: "Montserrat", sans-serif;
   color: white;
-  opacity: 90%;
   max-width: 570px;
   margin-top: 180px;
   box-shadow: 0 0 30px whitesmoke;
@@ -43,6 +42,7 @@ body {
   border: 1px solid whitesmoke;
   border-radius: 10px;
   box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+  opacity: 95%;
 }
 
 .button:hover,
@@ -61,17 +61,17 @@ body {
 }
 
 #current-city {
-  font-size: 34px;
+  font-size: 43px;
 }
 
 #country {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bolder;
   margin-left: 15px;
 }
 
 #current-date {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 ul.current-weather {
@@ -82,7 +82,7 @@ li#humidity,
 #wind,
 #temp {
   list-style: none;
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.8;
 }
 
