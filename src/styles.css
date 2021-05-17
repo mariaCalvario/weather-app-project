@@ -92,7 +92,7 @@ li#humidity,
 }
 
 .temperature-link:hover {
-  color: #838383;
+  color: #046582;
   font-weight: bold;
   transition: all 200ms ease;
 }
