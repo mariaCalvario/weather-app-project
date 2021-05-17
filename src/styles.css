@@ -71,20 +71,17 @@ body {
   font-size: 17px;
 }
 
-ul {
+ul.current-weather {
   padding: 0;
 }
 
-li {
+li#humidity,
+#wind,
+#temp {
   list-style: none;
   font-size: 15px;
   font-weight: 500;
-}
-#description {
-  font-size: 22px;
-}
-#description:first-letter {
-  text-transform: uppercase;
+  line-height: 1.8;
 }
 
 .temperature-link {
@@ -98,8 +95,19 @@ li {
   transition: all 200ms ease;
 }
 
-.temperature-units {
+#icon {
+  margin-top: 30px;
+}
+
+.description-temp {
+  font-size: 22px;
+}
+#description {
   font-size: 25px;
+}
+
+#description:first-letter {
+  text-transform: uppercase;
 }
 
 .forecast img {

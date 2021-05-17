@@ -42,7 +42,7 @@
         </div>
         <div class="col-auto current-button">
           <button type="submit" class="btn btn-primary mb-3" id="geo-button">
-            📍
+            <img src="images/geo-icon.png" width="17px" alt="" />
           </button>
         </div>
       </form>
@@ -53,30 +53,31 @@
             <p id="current-date"></p>
           </div>
 
-          <div class="current-weather">
-            <ul>
-              <li id="description"></li>
+          <div class>
+            <ul class="current-weather">
               <li id="humidity"></li>
               <li id="wind"></li>
-              <li>
+              <li id="temp">
                 Temperature: <span id="temp-min"></span> |
                 <span id="temp-max"></span>
               </li>
             </ul>
-            <p></p>
           </div>
         </div>
-        <div class="col-6 text-center temperature-units">
+        <div class="col-6 text-center description-temp">
           <img src="" alt="" id="icon" width="150px" />
           <br />
-          <span id="current-temperature"></span>
-          <span id="celsius-link"
-            ><a href="#" class="temperature-link">°C </a></span
-          >
-          <span>|</span>
-          <span id="farenheit-link"
-            ><a href="#" class="temperature-link">°F</a></span
-          >
+          <h2 id="description"></h2>
+          <div class="temp-units">
+            <span id="current-temperature"></span>
+            <span id="celsius-link"
+              ><a href="#" class="temperature-link">°C </a></span
+            >
+            <span>|</span>
+            <span id="farenheit-link"
+              ><a href="#" class="temperature-link">°F</a></span
+            >
+          </div>
         </div>
       </div>
 
