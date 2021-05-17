@@ -39,11 +39,10 @@ body {
   color: white;
   font-size: 18px;
   font-weight: 500;
-  background-color: transparent;
-  opacity: 100%;
+  background-color: #6c8fad;
   border: 1px solid whitesmoke;
   border-radius: 10px;
-  box-shadow: 0 1px 6px 0 whitesmoke;
+  box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
 }
 
 .button:hover,
@@ -83,7 +82,7 @@ li#humidity,
 #wind,
 #temp {
   list-style: none;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.8;
 }
 
@@ -107,6 +106,7 @@ li#humidity,
 }
 #description {
   font-size: 25px;
+  margin-top: 10px;
 }
 
 #description:first-letter {
