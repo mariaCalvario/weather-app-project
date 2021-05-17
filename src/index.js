@@ -36,10 +36,12 @@ function showTemperature(response) {
   let maxTemp = document.querySelector("#temp-max");
   let icon = document.querySelector("#icon");
 
+  celsiusTemperature = response.data.main.temp;
+
   currentDate.innerHTML = formatDate(new Date(response.data.dt * 1000));
   currentCity.innerHTML = response.data.name;
   country.innerHTML = response.data.sys.country;
-  currentTemperature.innerHTML = Math.round(response.data.main.temp);
+  currentTemperature.innerHTML = Math.round(celsiusTemperature);
   description.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = `Humidity: ${response.data.main.humidity}%`;
   wind.innerHTML = `Wind speed: ${Math.round(response.data.wind.speed)} km/h`;
@@ -79,30 +81,35 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
+function showFarenheitTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.remove("active");
+  farenheitLink.classList.add("active");
+  let currentTemperature = document.querySelector("#current-temperature");
+  let farenheitTemperature = Math.round((celsiusTemperature * 9) / 5 + 32);
+  currentTemperature.innerHTML = farenheitTemperature;
+}
+
+function showCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  farenheitLink.classList.remove("active");
+  let currentTemperature = document.querySelector("#current-temperature");
+  currentTemperature.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
 let searchButton = document.querySelector("#search-form");
 searchButton.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#geo-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
+let farenheitLink = document.querySelector("#farenheit-link");
+farenheitLink.addEventListener("click", showFarenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemperature);
+
 searchCity("Lisbon");
-
-//Change Celsius/Farenheit********
-/*function changeToFarenheit(event) {
-  event.preventDefault();
-  let farenheit = document.querySelector("#temperature-now");
-  let changeFarenheit = Math.round((farenheit.innerHTML * 9) / 5 + 32);
-  farenheit.innerHTML = changeFarenheit;
-}
-
-function changeToCelsius(event) {
-  event.preventDefault();
-  let celsius = document.querySelector("#temperature-now");
-  celsius.innerHTML = 25;
-}
-
-let farenheit = document.querySelector("#farenheit-link");
-farenheit.addEventListener("click", changeToFarenheit);
-
-let celsius = document.querySelector("#celsius-link");
-celsius.addEventListener("click", changeToCelsius);*/

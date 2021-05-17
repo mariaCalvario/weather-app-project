@@ -42,7 +42,7 @@ body {
   border: 1px solid whitesmoke;
   border-radius: 10px;
   box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
-  opacity: 95%;
+  opacity: 90%;
 }
 
 .button:hover,
@@ -86,17 +86,6 @@ li#humidity,
   line-height: 1.8;
 }
 
-.temperature-link {
-  text-decoration: none;
-  color: white;
-}
-
-.temperature-link:hover {
-  color: #046582;
-  font-weight: bold;
-  transition: all 200ms ease;
-}
-
 #icon {
   margin-top: 30px;
 }
@@ -117,6 +106,17 @@ li#humidity,
   font-size: 20px;
 }
 
+.active {
+  color: white;
+  text-decoration: none;
+  cursor: default;
+}
+
+.active:hover {
+  color: white;
+  text-decoration: none;
+}
+
 .forecast img {
   width: 50px;
 }
@@ -128,7 +128,7 @@ li#humidity,
 
 #open-source-link {
   text-decoration: none;
-  color: #046582;
+  color: #064420;
 }
 
 #open-source-link:hover {
