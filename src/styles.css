@@ -106,19 +106,13 @@ li#humidity,
   font-size: 20px;
 }
 
-.active {
-  color: white;
-  text-decoration: none;
-  cursor: default;
-}
-
-.active:hover {
-  color: white;
-  text-decoration: none;
-}
-
 .units a {
+  color: white;
   text-decoration: none;
+}
+
+.active {
+  cursor: default;
 }
 
 .forecast img {
