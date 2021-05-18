@@ -117,6 +117,10 @@ li#humidity,
   text-decoration: none;
 }
 
+.units a {
+  text-decoration: none;
+}
+
 .forecast img {
   width: 50px;
 }
