@@ -10,7 +10,7 @@ body {
   background: transparent;
   font-family: "Montserrat", sans-serif;
   color: white;
-  max-width: 570px;
+  max-width: 600px;
   margin-top: 180px;
   box-shadow: 0 0 30px whitesmoke;
   border: 1px solid #838383;
@@ -115,8 +115,19 @@ li#humidity,
   cursor: default;
 }
 
-.forecast img {
-  width: 50px;
+.weather-forecast {
+  text-align: center;
+  font-size: 15px;
+}
+
+.weather-forecast-date {
+  margin-bottom: 0;
+}
+
+.weather-forecast img {
+  width: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .footer {
