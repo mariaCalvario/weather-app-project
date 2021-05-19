@@ -10,7 +10,7 @@ body {
   background: transparent;
   font-family: "Montserrat", sans-serif;
   color: white;
-  max-width: 580px;
+  max-width: 570px;
   margin-top: 180px;
   box-shadow: 0 0 30px whitesmoke;
   border: 1px solid #838383;
@@ -117,7 +117,7 @@ li#humidity,
 
 .weather-forecast {
   text-align: center;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .weather-forecast-date {
